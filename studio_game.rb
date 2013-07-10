@@ -6,3 +6,5 @@ i = 0
 	i = i + 1
 	puts "#{message} #{i}"
 end
+
+puts "Printing the current Date/Time: #{Time.new}"
