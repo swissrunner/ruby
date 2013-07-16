@@ -43,5 +43,25 @@ puts "Player #{player_2} has a health value of #{player_health_2}"
 puts
 puts "Player #{player_3.center(10, '*')} has a health value of #{player_health_3}"
 puts
-input = "Player #{player_3} has a health value of #{player_health_3}"
-puts "#{input.center(50, '*')}"
+input1 = "Player #{player_3} has a health value of #{player_health_3}"
+puts "#{input1.center(50, '*')}"
+puts
+puts "Player #{player_4.capitalize}"
+input2 = "Player #{player_4.capitalize.ljust(20, '.')}"
+puts "#{input2} #{player_health_4} Health"
+puts
+puts "Player #{player_4.capitalize.ljust(30, '.')} #{player_health_4} Health"
+puts
+puts Time
+puts
+t1 = Time.new
+puts t1
+puts t1.strftime("Game started on %A %m/%d/%Y at %H:%m")
+
+def player_info(input)
+	puts input
+end
+puts
+info = "Hello"
+puts player_info(info)
+
