@@ -1,6 +1,7 @@
 class Movie
 	attr_reader :title, :rank
 	attr_writer :title, :rank
+
 	def initialize(title, rank=0.0)
 		@title = title.capitalize.to_s
 		@rank = rank.to_i
@@ -58,23 +59,23 @@ movie_1.rank = 20
 puts "Printing Initial Movie Info: #{movie_1.to_s()}"
 
 puts "-------------------------------------------------------------------------------------"
-movie_2 = Movie.new("Gone With The Wind", 20)
-#movie_2.rank_down(down_value)
-puts movie_2.rank_down(down_value).to_s()
-movie_2.rank_up(up_value)
-puts movie_2.to_s()
-puts movie_2.to_s()
-puts "-------------------------------------------------------------------------------------"
+#movie_2 = Movie.new("Gone With The Wind", 20)
+##movie_2.rank_down(down_value)
+#puts movie_2.rank_down(down_value).to_s()
+#movie_2.rank_up(up_value)
+#puts movie_2.to_s()
+#puts movie_2.to_s()
+#puts "-------------------------------------------------------------------------------------"
 
-movie_3 = Movie.new("Platoon").rank_up(up_value).to_s()
-#puts movie_3.listing("Hell Freezes Over", 20.0).rank_up(up_value).to_s()
-puts movie_3.to_s()
-puts movie_3.to_s()
-puts "-------------------------------------------------------------------------------------"
+#movie_3 = Movie.new("Platoon").rank_up(up_value).to_s()
+##puts movie_3.listing("Hell Freezes Over", 20.0).rank_up(up_value).to_s()
+#puts movie_3.to_s()
+#puts movie_3.to_s()
+#puts "-------------------------------------------------------------------------------------"
 
-movie_4 = Movie.new("Ford", 1)
-puts movie_4.to_s()
-puts movie_4.to_s()
-movie_4.listing("Ford", 1)
-puts movie_4.to_s()
-puts "-------------------------------------------------------------------------------------"
+#movie_4 = Movie.new("Ford", 1)
+#puts movie_4.to_s()
+#puts movie_4.to_s()
+#movie_4.listing("Ford", 1)
+#puts movie_4.to_s()
+#puts "-------------------------------------------------------------------------------------"
