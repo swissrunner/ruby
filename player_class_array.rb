@@ -4,14 +4,15 @@ class Player
 	attr_writer :name
 	attr_accessor :rank, :score
 
-	def initialize(param_1, param_2=0.0, param_3=0.0)
+	def initialize(param_1, param_2=0.0, param_3=0.0, param_4=0)
 		@name = param_1.capitalize
 		@score = param_2.to_f
 		@rank = param_3.to_i
+		@team = param_4.to_i
 	end
 
 	def to_s()
-		"My Name is: #{@name}, I have: #{@score} points and a Rank of: #{@rank}"		
+		"My Name is: #{@name}, I belong to Team #{@team}, I have: #{@score} points and a Rank of: #{@rank}"		
 	end
 
 	def up_tick(value_1, value_2)
@@ -22,6 +23,10 @@ class Player
 	def down_tick(value_1, value_2)
 		@score -= value_1
 		@rank += value_2
+	end
+
+	def team_size()
+		
 	end
 end
 
@@ -41,10 +46,10 @@ player_4_score = 12.99
 player_4_rank = 1
 
 # Creating new player objects and passing in name/point variables
-player_1 = Player.new(player_1_name, player_1_score, player_1_rank)
-player_2 = Player.new(player_2_name, player_2_score, player_2_rank)
-player_3 = Player.new(player_3_name, player_3_score, player_3_rank)
-player_4 = Player.new(player_4_name, player_4_score, player_4_rank)
+player_1 = Player.new(player_1_name, player_1_score, player_1_rank, 1)
+player_2 = Player.new(player_2_name, player_2_score, player_2_rank, 2)
+player_3 = Player.new(player_3_name, player_3_score, player_3_rank, 3)
+player_4 = Player.new(player_4_name, player_4_score, player_4_rank, 4)
 
 #puts player_1
 #puts player_2
@@ -70,4 +75,24 @@ end
 
 team_3.each do |x|
         puts x
+end
+
+puts "Team Size 1: #{team_1.size}"
+
+puts player_1.score
+puts player_1.rank
+
+team_1.each do |info|
+	puts info.score
+	puts info.rank
+end
+
+team_2.each do |info|
+        puts info.score
+        puts info.rank
+end
+
+team_3.each do |info|
+        puts info.score
+        puts info.rank
 end
